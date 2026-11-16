@@ -68,13 +68,13 @@ A PowerShell script was developed to:
 - Display timestamps, target accounts, logon types, status codes, and source addresses.
 - Summarize the retrieved events by Event ID.
 
-**Script:** [`analyze-security-logs.ps1`](scripts/analyze-security-logs.ps1)
+**Script:** [`analyze-security-logs.ps1`](Scripts/analyze-security-logs.ps1)
 
-To execute the script, open PowerShell as Administrator, navigate to the scripts directory, and run:
+To execute the script, open PowerShell as Administrator, navigate to the project directory, and run:
 
 ```powershell
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\analyze-security-logs.ps1
+.\Scripts\analyze-security-logs.ps1
 ```
 
 The execution-policy change applies only to the current PowerShell session.
@@ -85,31 +85,33 @@ The following screenshots document the investigation process:
 
 ### 1. Audit Policy Configuration
 
-![Audit Policy Configuration](screenshots/01-audit-policy.png)
+![Audit Policy Configuration](Screenshots/01-audit-policy.png)
 
 ### 2. Failed Login Event — General Details
 
-![Event ID 4625 General Details](screenshots/02-event-4625-general.png)
+![Event ID 4625 General Details](Screenshots/02-event-4625-general.png)
 
 ### 3. Failed Login Event — XML Details
 
-![Event ID 4625 XML Details](screenshots/03-event-4625-xml.png)
+![Event ID 4625 XML Details](Screenshots/03-event-4625-xml.png)
 
 ### 4. Repeated Failed Login Attempts
 
-![Repeated Failed Login Events](screenshots/04-repeated-failed-logins.png)
+![Repeated Failed Login Events](Screenshots/04-repeated-failed-logins.png)
 
 ### 5. PowerShell Security Log Analysis
 
 The PowerShell investigation output is documented across three screenshots:
 
-- `screenshots/05-powershell-analysis-01.png`
-- `screenshots/05-powershell-analysis-02.png`
-- `screenshots/05-powershell-analysis-03.png`
+![PowerShell Analysis - Part 1](Screenshots/05-powershell-analysis-01.png)
+
+![PowerShell Analysis - Part 2](Screenshots/05-powershell-analysis-02.png)
+
+![PowerShell Analysis - Part 3](Screenshots/05-powershell-analysis-03.png)
 
 ### 6. PowerShell Script Execution
 
-![PowerShell Script Execution](screenshots/06-script-execution.png)
+![PowerShell Script Execution](Screenshots/06-script-execution.png)
 
 ## Security Analysis & Conclusion
 
@@ -148,3 +150,7 @@ windows-security-log-analysis/
 ## Disclaimer
 
 This project was conducted in a personal Windows lab environment using controlled authentication-failure simulations. No unauthorized systems or accounts were targeted.
+
+## Investigation Report
+
+[Read the full investigation report](Report/investigation-report.md)
