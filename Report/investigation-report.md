@@ -101,7 +101,7 @@ Unknown user name or bad password
 The following command was used to retrieve failed logon events:
 
 $events = Get-WinEvent -FilterHashtable @{
-    LogName = 'Security'
+    LogName = 'Security';
     Id = 4625
 } -MaxEvents 20
 
